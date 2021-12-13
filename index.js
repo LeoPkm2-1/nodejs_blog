@@ -1,16 +1,15 @@
 const express = require('express');
+const morgan = require('morgan');
 const app=express();
 const port =3000;
 
+app.use(morgan('combined'));
 
 app.get('/leo_15',(req,res)=> {
-    var a=4;
-    var b=16;
-    var c=a+b;
+   
     return res.send('ahihi xin chao cac ban!');
     
-}
-);
+});
 app.listen(port,()=>console.log(`Example app listening at http://localhost:${port}`));
 
 
